@@ -5,5 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Say hello
-        run: echo "Pipeline is running!"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run test
+        run: node math.test.js
