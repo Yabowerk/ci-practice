@@ -19,5 +19,5 @@ jobs:
         run: docker run ci-practice-app
       - name: Show that secret is available
         env:
-          MY_API_KEY: ${{ secrets.MY_API_KEY }}
-        run: echo "The key starts with: ${MY_API_KEY:0:5}"
+          MY_API_KEY: ${{ secrets.API_KEY }}
+        run: echo "The key starts with: ${API_KEY:0:5}"
