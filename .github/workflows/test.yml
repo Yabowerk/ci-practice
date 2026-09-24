@@ -20,4 +20,5 @@ jobs:
       - name: Show that secret is available
         env:
           API_KEY: ${{ secrets.API_KEY }}
-        run: echo "The key starts with: ${API_KEY:0:5}"
+        run: |
+          echo "The key starts with: ${API_KEY:0:5}"
